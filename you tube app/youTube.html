@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Tube</title>
+    <link rel="stylesheet" href="youTube.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div id="leftcorner">
+            <div><i class="fa-solid fa-bars"></i></div>
+            <div><i class="fa-brands fa-youtube"></i>
+                YouTube</div>
+        </div>
+        <div id="center">
+            <input type="text" placeholder="Search Anything" id="searchParam">
+            <button id="btnSearch" onclick="fetchData()">
+                <i class="fa-solid fa-magnifying-glass"></i></button>
+            <i class="fa-solid fa-microphone"></i>
+        </div>
+        <div id="rightcorner">
+            <i class="fa-solid fa-video"></i>
+            <i class="fa-solid fa-bell"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+    </nav>
+    <select id="uploadDate" onchange="xyz()">
+        <option value="1970-01-01T00:00:00Z">UPLOAD DATE</option>
+        <option value="1">Last hour</option>
+        <option value="2">Today</option>
+        <option value="3">This Week</option>
+        <option value="4">This month</option>
+        <option value="5">This year</option>
+    </select>
+    <select id="type" onchange="xyz()">
+        <option value="video,channel,playlist">TYPE</option>
+        <option value="video">Video</option>
+        <option value="channel">Channel</option>
+        <option value="playlist">Playlist</option>
+        <option value="movie">Movie</option>
+    </select>
+    <select id="duration" onchange="xyz()">
+        <option value="any">DURATION</option>
+        <option value="short">Under 4 minutes</option>
+        <option value="medium">4-20 Minutes</option>
+        <option value="long">Over 20 Minutes</option>
+    </select>
+
+    <div id="resultContainer">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+
+</html>
+<script src="./youTube.js"></script>
